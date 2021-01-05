@@ -2,6 +2,7 @@ import { Canvas, useFrame } from "react-three-fiber";
 import { OrbitControls, Stars } from "drei";
 import "./App.css";
 import { useState } from "react";
+import Shooter from "./Shooter";
 
 export function MediumLight() {
   return (
@@ -144,7 +145,7 @@ function Sphere({ color }) {
   );
 }
 
-function App() {
+export function App() {
   return (
     <div className="App-header">
       <Canvas
@@ -152,7 +153,7 @@ function App() {
           flex: 1
         }}
         camera={{
-          position: [25, 13, 10]
+          position: [2, 2, 2]
         }}
       >
         <Stars />
@@ -169,4 +170,4 @@ function App() {
   );
 }
 
-export default App;
+export default Shooter;
